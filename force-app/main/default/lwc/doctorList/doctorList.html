@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Doctor List">
+
+        <template if:true={doctors}>
+            <lightning-datatable
+                key-field="Id"
+                data={doctors}
+                columns={columns}>
+            </lightning-datatable>
+        </template>
+
+        <template if:true={error}>
+            <p style="color:red;">Error loading doctors</p>
+        </template>
+
+    </lightning-card>
+</template>
